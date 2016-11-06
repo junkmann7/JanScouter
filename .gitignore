@@ -1,0 +1,69 @@
+# Linux/Mac/Windows
+*~
+.DS_Store
+Thumbs.db
+
+# Java class
+*.class
+
+# Built application files
+*.ap_
+*.apk
+
+# Files for dex VM
+*.dex
+
+# Gradle
+build/
+/.gradle/
+/local.properties
+
+# Android Studio
+*.iml
+
+/.idea/*.xml
+/.idea/**/*.xml
+
+!/.idea/codeStyleSettings.xml
+!/.idea/copyright/*.xml
+!/.idea/encodings.xml
+!/.idea/gradle.xml
+
+# "Shared" Run Config
+# Add from "Run" > "Edit Configurations..." and check "Share".
+!/.idea/runConfigurations/*.xml
+
+# Shared inspection profiles
+!/.idea/inspectionProfiles/*.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+
+# Share "Shared" Scope definition and avoid adding Scope Settings.
+# Add new "Shared" Scope from "File" > "Settings" > "Appearance & Behavior" > "Scopes".
+!/.idea/scopes/*.xml
+/.idea/scopes/scope_settings.xml
+
+# Shared colors for Scopes
+# Add shared color from "File" > "Settings" > "Appearance & Behavior" > "File Colors" > "Shared Colors"
+!/.idea/fileColors.xml
+
+# Template Data Languages
+# Maybe, NOT needed for Android Dev.
+!/.idea/templateLanguages.xml
+
+# Ant
+/**/bin/
+/**/gen/
+
+# Eclipse
+/**/.settings/
+
+# Avoid adding local patch files
+*.patch
+
+# Avoid jni library files
+*.so
+app/src/main/libs/*
+app/src/main/obj/*
+
+# Avoid production files
+app/src/production/

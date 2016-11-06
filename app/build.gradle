@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+
+import org.apache.tools.ant.taskdefs.condition.Os
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "jp.tonosama.komoki.janscouter"
+        minSdkVersion 9
+        targetSdkVersion 9
+    }
+    signingConfigs {
+        debug {
+            storeFile file("../config/debug.keystore")
+        }
+        release
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            signingConfig signingConfigs.debug
+            ext.enableCrashlytics = false
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled true
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            proguardFile file('proguard-mlink.cfg')
+            ext.enableCrashlytics = false
+        }
+    }
+    productFlavors {
+        develop
+        production
+    }
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDir "src/main/libs"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.google.android.gms:play-services-ads:7.5.0'
+}
+
+def getNdkBuildCmd() {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    def ndkDir = properties.getProperty('ndk.dir', null)
+    if (ndkDir == null) {
+        throw new GradleException("NDK location not found. Define location with ndk.dir in local.properties.")
+    }
+    def ndkBuildCmd = ndkDir + '/ndk-build'
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        ndkBuildCmd += '.cmd'
+    }
+    return ndkBuildCmd
+}
+
+task NDKBuildDebug(type: Exec) {
+    group 'ndk'
+    commandLine getNdkBuildCmd(), 'V=0', '-j10', 'NDK_DEBUG=1', 'OVR_DEBUG=1', "NDK_PROJECT_PATH=$projectDir/src/main"
+}
+
+task NDKBuildRelease(type: Exec) {
+    group 'ndk'
+    commandLine getNdkBuildCmd(), 'V=0', '-j10', 'NDK_DEBUG=0', 'OVR_DEBUG=0', "NDK_PROJECT_PATH=$projectDir/src/main"
+}
+
+task NDKBuildClean(type: Exec) {
+    group 'ndk'
+    commandLine getNdkBuildCmd(), 'clean', "NDK_PROJECT_PATH=$projectDir/src/main"
+}

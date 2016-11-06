@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dip"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/guide_sample_07" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="20" />
+
+        <TextView
+            android:id="@+id/guide_text_07"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:background="#09D"
+            android:gravity="center|left"
+            android:lineSpacingMultiplier="1.4"
+            android:padding="10dp"
+            android:text="@string/guide_sample_07"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/guide_text_size"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+</RelativeLayout>

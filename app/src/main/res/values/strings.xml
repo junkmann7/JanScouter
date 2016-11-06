@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"           >雀スカウター</string>
+    <string name="camera_alert"       >Device has only one camera!</string>
+    <string name="switch_cam"         >Switch Camera</string>
+
+    <string name="main_title_1">"雀"</string>
+    <string name="main_title_2">"スカウター"</string>
+
+    <string name="title_main"         >"雀スカウター"</string>
+    <string name="title_setting"      >"初期設定"</string>
+    <string name="title_score_result" >"スコア表"</string>
+    <string name="title_push_start"   >"PUSH START"</string>
+
+    <string name="usage_title"        >"操作ガイド"</string>
+
+    <string name="guide_sample_00"    >"はじめに、\n「サンプル検出」を選択してください"</string>
+    <string name="guide_sample_01"    >"お使いの麻雀牌を、\n上の図のとおりに並べてください"</string>
+    <string name="guide_sample_02"    >"すべての麻雀牌を、\nスカウターの枠内に写してください"</string>
+    <string name="guide_sample_03"    >"麻雀牌が見つかると\n牌の上に枠が表示されます。\n３６個すべての牌が見つかるように\n位置を調整してください"</string>
+    <string name="guide_sample_04"    >"すべての牌が見つかると、\n検出結果を表示します。\n牌を確認してください。\n問題が無ければ｢OK｣で終了します。"</string>
+    <string name="guide_sample_05"    >"牌が正しく検出されていなかったり、\n絵柄が明瞭でなかった場合、\n｢TRY AGAIN｣でやり直してください。\nこの牌の品質は、\nスカウターの測定精度に影響します。"</string>
+    <string name="guide_sample_06"    >"検出した牌は、\nタイトル画面の「サンプル確認」から\nいつでも確認することができます。\n以上でサンプル検出は終了です。"</string>
+    <string name="guide_sample_07"    >"続いて、\n「PUSH START」を選択してください"</string>
+    <string name="guide_sample_08"    >"点数を測定したいあがり牌を、\n上の図のように並べてください"</string>
+    <string name="guide_sample_09"    >"手牌と鳴き牌を、\n枠内に写してください"</string>
+    <string name="guide_sample_10"    >"すべての牌が見つかると、\nあがり結果を測定します。"</string>
+    <string name="guide_sample_11"    >"あがり結果を表示します。\nドラや本場は手動で入力してください。\n検出した牌が間違っていた場合は、\nタッチで変更することができます。"</string>
+    <string name="guide_sample_12"    >"操作ガイドは以上です。\n\nそれでは、\nLet's start“雀スカウター” !!"</string>
+    <string name="guide_sample_13"    >""</string>
+    <string name="guide_sample_14"    >""</string>
+    <string name="guide_sample_15"    >""</string>
+
+    <string name="scouter_scan_ok"     >"OK"</string>
+    <string name="scouter_scan_ng"     >"TRY AGAIN"</string>
+    <string name="scouter_scan_close"  >"Close"</string>
+    <string name="scouter_scan_detail" >"Detail"</string>
+
+    <string name="btn_exit_guidance"  >"サンプル検出してみる"</string>
+    <string name="btn_start"          >"サンプル\n検出"</string>
+    <string name="btn_result_detect"  >"あがり牌の検出"</string>
+    <string name="btn_initial_settng" >"初期設定"</string>
+    <string name="btn_result_scouter" >"スカウター"</string>
+    <string name="btn_score"          >"スコア表"</string>
+    <string name="btn_setting"        >"設定"</string>
+    <string name="btn_usage"          >"使い方"</string>
+    <string name="btn_sample_confirm" >"サンプル\n確認"</string>
+    <string name="title_sample_confirm" >"サンプル確認"</string>
+
+    <string name="sample_viewer_detail" >"詳細"</string>
+    <string name="sample_viewer_all"    >"一覧"</string>
+
+    <string name="result_tehi_txt"       >"手牌"</string>
+    <string name="result_dora_txt"       >"ドラ"</string>
+    <string name="result_naki_txt"       >"鳴き"</string>
+    <string name="result_edit_exit"      >"終了"</string>
+    <string name="result_edit_retry"     >"検出やり直し"</string>
+    <string name="result_edit_recompute" >"計算やり直し"</string>
+    <string name="non_scan_mode_btn"     >"手動モード（牌検出しないモード）"</string>
+
+    <string name="pre_result_setting_ron"   >"ロン"</string>
+    <string name="pre_result_setting_tsumo" >"ツモ"</string>
+
+    <string name="result_setting_honba"     >"本場"</string>
+    <string name="result_setting_honba_list">"%1$d 本場"</string>
+    <string name="result_setting_waza"      >"技"</string>
+    <string name="result_setting_tsumo"     >"自摸"</string>
+    <string name="result_setting_reach"     >"立直"</string>
+    <string name="result_setting_ippatsu"   >"一発"</string>
+    <string name="result_setting_rinshan"   >"嶺上"</string>
+    <string name="result_setting_chankan"   >"槍槓"</string>
+    <string name="result_setting_haitei"    >"海底"</string>
+    <string name="result_setting_open"      >"オープン"</string>
+    <string name="result_setting_tenhoo"    >"天和"</string>
+    <string name="result_setting_chihoo"    >"地和"</string>
+    <string name="result_setting_double"    >"Ｗ立直"</string>
+
+    <string name="detection_guide"          >"ヒント：画面をタップするとピントを合わせることができます"</string>
+
+    <string name="menu_launch_setting">"設定"</string>
+
+    <string name="etc_content_desctiption">"image"</string>
+    <string name="desc">"image"</string>
+
+</resources>

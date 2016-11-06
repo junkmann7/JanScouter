@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="設定" >
+        <ListPreference
+            android:dialogTitle="スカウターの大きさ"
+            android:entries="@array/scouter_size_entries"
+            android:entryValues="@array/scouter_size_entriy_values"
+            android:key="SCOUTER_SIZE"
+            android:summary="スカウターの大きさの設定"
+            android:title="スカウターの大きさ" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="IS_ENABLE_SOUND"
+            android:summary="スカウターの効果音を使用する"
+            android:title="音を鳴らす" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="SAVE_IN_SDCARD"
+            android:summary="サンプル牌データの保存・読み込みをSDカードで行う。"
+            android:title="SDカードを使用する" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="IS_ONLY_PREVIEW"
+            android:summary="カメラからのスルー画像を表示するのみで、牌の検出処理を行わない。"
+            android:title="プレビューのみ行う" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="IS_ONLY_ANALYZE"
+            android:summary="検出処理過程のエッジ画像の表示、シャッターボタン、デバッグボタンを使用する。"
+            android:title="デバッグ機能を使用する" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

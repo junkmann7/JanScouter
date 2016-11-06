@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyLightTheme" parent="android:Theme.Holo.Light" />
+    <!-- for debug s -->
+    <!--
+    <color name="debug_color_1">#f00</color>
+    <color name="debug_color_2">#00f</color>
+    <color name="debug_color_3">#ff0</color>
+    <color name="debug_color_4">#0ff</color>
+     -->
+    <!-- for debug e -->
+
+    <color name="debug_color_1">@null</color>
+    <color name="debug_color_2">@null</color>
+    <color name="debug_color_3">@null</color>
+    <color name="debug_color_4">@null</color>
+</resources>

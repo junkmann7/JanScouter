@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back" >
+
+    <ScrollView
+        android:layout_above="@id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:background="@drawable/btn_frame_white_normal"
+                android:gravity="center|center"
+                android:minHeight="60dip"
+                android:padding="10dip" >
+
+                <Button
+                    android:id="@+id/result_reach_btn"
+                    android:layout_width="72dip"
+                    android:layout_height="48dip"
+                    android:background="@drawable/dball_enable"
+                    android:shadowColor="#AAA"
+                    android:shadowDx="2.0"
+                    android:shadowDy="3.2"
+                    android:shadowRadius="3.0"
+                    android:text="@string/result_setting_reach"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/result_double_btn"
+                    android:layout_width="72dip"
+                    android:layout_height="48dip"
+                    android:background="@drawable/dball_enable"
+                    android:shadowColor="#AAA"
+                    android:shadowDx="2.0"
+                    android:shadowDy="3.2"
+                    android:shadowRadius="3.0"
+                    android:text="@string/result_setting_double"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/result_ippatsu_btn"
+                    android:layout_width="72dip"
+                    android:layout_height="48dip"
+                    android:background="@drawable/dball_enable"
+                    android:shadowColor="#AAA"
+                    android:shadowDx="2.0"
+                    android:shadowDy="3.2"
+                    android:shadowRadius="3.0"
+                    android:text="@string/result_setting_ippatsu"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/result_tsumo_btn"
+                    android:layout_width="72dip"
+                    android:layout_height="48dip"
+                    android:background="@drawable/dball_enable"
+                    android:shadowColor="#AAA"
+                    android:shadowDx="2.0"
+                    android:shadowDy="3.2"
+                    android:shadowRadius="3.0"
+                    android:text="@string/pre_result_setting_tsumo"
+                    android:textColor="#000"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/result_tsumo_toggle_btn"
+                    android:layout_width="72dip"
+                    android:layout_height="48dip"
+                    android:background="@drawable/tsumo_toggle_off"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/result_tsumo_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_gravity="left"
+                        android:layout_weight="2"
+                        android:gravity="center|center"
+                        android:text="@string/pre_result_setting_tsumo"
+                        android:textColor="#FFF"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/result_ron_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:gravity="center|center"
+                        android:text="@string/pre_result_setting_ron"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/result_rinshan_btn"
+                    android:layout_width="72dip"
+                    android:layout_height="48dip"
+                    android:background="@drawable/dball_enable"
+                    android:shadowColor="#AAA"
+                    android:shadowDx="2.0"
+                    android:shadowDy="3.2"
+                    android:shadowRadius="3.0"
+                    android:text="@string/result_setting_rinshan"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/result_open_btn"
+                    android:layout_width="72dip"
+                    android:layout_height="48dip"
+                    android:background="@drawable/dball_enable"
+                    android:shadowColor="#AAA"
+                    android:shadowDx="2.0"
+                    android:shadowDy="3.2"
+                    android:shadowRadius="3.0"
+                    android:text="@string/result_setting_open"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/result_haitei_btn"
+                    android:layout_width="72dip"
+                    android:layout_height="48dip"
+                    android:background="@drawable/dball_enable"
+                    android:shadowColor="#AAA"
+                    android:shadowDx="2.0"
+                    android:shadowDy="3.2"
+                    android:shadowRadius="3.0"
+                    android:text="@string/result_setting_haitei"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_frame_green_normal"
+                android:gravity="center|center"
+                android:minHeight="60dip"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/result_dora_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/result_tehai_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/result_naki_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/result_agari_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/btn_frame_white"
+                android:gravity="center|center"
+                android:minHeight="60dip"
+                android:paddingLeft="10dip"
+                android:shadowColor="#000"
+                android:shadowDx="2.0"
+                android:shadowDy="3.2"
+                android:shadowRadius="3.0"
+                android:textColor="#0387FF" />
+
+            <TextView
+                android:id="@+id/result_debug_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:shadowColor="#000"
+                android:shadowDx="2.0"
+                android:shadowDy="3.2"
+                android:shadowRadius="3.0"
+                android:textColor="#333"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/agari_result_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:orientation="vertical" />
+
+            <!-- 本場/ドラ/自風/場風 ここから -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|center" >
+
+                    <Button
+                        android:id="@+id/result_honba_minus"
+                        android:layout_width="52dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_frame_black"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/result_honba_text"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_frame_gray"
+                        android:gravity="center|center"
+                        android:shadowColor="#CCC"
+                        android:shadowDx="2.0"
+                        android:shadowDy="3.2"
+                        android:shadowRadius="3.0"
+                        android:textColor="#202020" />
+
+                    <Button
+                        android:id="@+id/result_honba_plus"
+                        android:layout_width="52dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_frame_black"
+                        android:textColor="#FFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|center" >
+
+                    <Button
+                        android:id="@+id/result_dora_minus"
+                        android:layout_width="52dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_frame_black"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/result_dora_text"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_frame_gray"
+                        android:gravity="center|center"
+                        android:shadowColor="#CCC"
+                        android:shadowDx="2.0"
+                        android:shadowDy="3.2"
+                        android:shadowRadius="3.0"
+                        android:textColor="#202020" />
+
+                    <Button
+                        android:id="@+id/result_dora_plus"
+                        android:layout_width="52dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_frame_black"
+                        android:textColor="#FFF" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:minHeight="60dip" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|center" >
+
+                    <Button
+                        android:id="@+id/result_jikaze_minus"
+                        android:layout_width="52dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_frame_black"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/result_jikaze_text"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_frame_gray"
+                        android:gravity="center|center"
+                        android:shadowColor="#CCC"
+                        android:shadowDx="2.0"
+                        android:shadowDy="3.2"
+                        android:shadowRadius="3.0"
+                        android:textColor="#202020" />
+
+                    <Button
+                        android:id="@+id/result_jikaze_plus"
+                        android:layout_width="52dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_frame_black"
+                        android:textColor="#FFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|center" >
+
+                    <Button
+                        android:id="@+id/result_bakaze_minus"
+                        android:layout_width="52dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_frame_black"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/result_bakaze_text"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_frame_gray"
+                        android:gravity="center|center"
+                        android:shadowColor="#CCC"
+                        android:shadowDx="2.0"
+                        android:shadowDy="3.2"
+                        android:shadowRadius="3.0"
+                        android:textColor="#202020" />
+
+                    <Button
+                        android:id="@+id/result_bakaze_plus"
+                        android:layout_width="52dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_frame_black"
+                        android:textColor="#FFF" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 本場/ドラ/自風/場風 ここまで -->
+        </LinearLayout>
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/mainLayout"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <LinearLayout
+            android:id="@+id/result_pickarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- for AdMob s -->
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center|center" />
+
+    <!-- for AdMob s -->
+
+    <ImageView
+        android:id="@+id/img_shenron"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/shenron"
+        android:visibility="invisible" />
+
+</RelativeLayout>
